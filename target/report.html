@@ -48,7 +48,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Feb 6, 2018 07:09:39 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Feb 6, 2018 08:38:53 PM</span>
 				</a>
 			</li>
 			<li>
@@ -75,6 +75,7 @@
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -165,10 +166,10 @@
 					<canvas id='grandchild-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='75%'><span class='strong'>3</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>2</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='25%'>1</span> others
 				</div>
 			</div>
 		</div>
@@ -185,7 +186,7 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Grid test</span>
-						<span class='test-time'>Feb 6, 2018 07:09:39 PM</span>
+						<span class='test-time'>Feb 6, 2018 08:38:53 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -193,7 +194,7 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@mytest</span>
 	</div>
-	<span class='duration right label'>0h 0m 31s+22ms</span>
+	<span class='duration right label'>0h 0m 13s+702ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">gridtest</span>
@@ -215,19 +216,11 @@
 				<div class='pre'>passed</div>
 			
 		</li>
-		<li test-id='5' class='node and pass' status='pass'>
+		<li test-id='5' class='node and fail' status='fail'>
 			
 			<b>And</b>
 			
 			<span class="bdd-step-name">And I search for jobs</span>
-				<div class='pre'>passed</div>
-			
-		</li>
-		<li test-id='6' class='node then fail' status='fail'>
-			
-			<b>Then</b>
-			
-			<span class="bdd-step-name">Then I apply for jobs</span>
 				<div class='pre'><pre>java.lang.NullPointerException
 	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
@@ -236,9 +229,17 @@
 	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:653)
 	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:646)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
-	at GridTest.grid.StepDef.i_apply_for_jobs(StepDef.java:177)
-	at ✽.Then I apply for jobs(src/test/test.feature:9)
+	at GridTest.grid.StepDef.i_search_for_jobs(StepDef.java:91)
+	at ✽.And I search for jobs(src/test/test.feature:8)
 </pre></div>
+			
+		</li>
+		<li test-id='6' class='node then skip' status='skip'>
+			
+			<b>Then</b>
+			
+			<span class="bdd-step-name">Then I apply for jobs</span>
+				<div class='pre'>skipped</div>
 			
 		</li>
 	</ul>
@@ -320,7 +321,7 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 6, 2018 07:09:39 PM</td>
+										<td>Feb 6, 2018 08:38:53 PM</td>
 										<td class='linked' test-id='2'>Grid test.gridtest</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -383,8 +384,8 @@
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Feb 6, 2018 07:09:59 PM</td>
-                                                        <td class='linked' test-id='6'>Grid test.gridtest.Then I apply for jobs</td>
+                                                        <td>Feb 6, 2018 08:39:05 PM</td>
+                                                        <td class='linked' test-id='5'>Grid test.gridtest.And I search for jobs</td>
                                                         <td><pre><pre>java.lang.NullPointerException
 	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
 	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
@@ -393,8 +394,8 @@
 	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:653)
 	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:646)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
-	at GridTest.grid.StepDef.i_apply_for_jobs(StepDef.java:177)
-	at ✽.Then I apply for jobs(src/test/test.feature:9)
+	at GridTest.grid.StepDef.i_search_for_jobs(StepDef.java:91)
+	at ✽.And I search for jobs(src/test/test.feature:8)
 </pre></pre></td>
                                                     </tr>
                                         </tbody>
@@ -439,19 +440,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 6, 2018 07:09:39 PM</div>
+					<div class='panel-lead'>Feb 6, 2018 08:38:53 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 6, 2018 07:10:10 PM</div>
+			 		<div class='panel-lead'>Feb 6, 2018 08:39:06 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>31,111ms</div>
+					<div class='panel-lead'>13,798ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -501,14 +502,14 @@
 				infoChild: 0,
 				exceptionsChild: 1,
 				
-				passGrandChild: 3,
+				passGrandChild: 2,
 				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 1,
 				infoGrandChild: 0,
-				exceptionsGrandChild: 1,
+				exceptionsGrandChild: 2,
 			};
 		</script>
 		
