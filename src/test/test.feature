@@ -1,5 +1,6 @@
 Feature: Grid test
 
+@mytest
 Scenario: gridtest
 
 Given I navigate to page
