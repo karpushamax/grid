@@ -45,6 +45,7 @@ public class StepDef {
 	@Given("^I navigate to page$")
 	public void i_navigate_to_webpage() throws Throwable {
 	 
+		System.out.println("MAX is STARTING TEST");
 		String url = Helper.getPropValue("landing", "navigation");
 
 		WebDriverManager.chromedriver().setup();
