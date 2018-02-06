@@ -1,0 +1,4 @@
+[0126/114423.102:ERROR:file_io_win.cc(179)] CreateFile C:\Users\bsati\AppData\Local\Temp\scoped_dir5844_27726\Crashpad\settings.dat: The process cannot access the file because it is being used by another process. (0x20)
+[0126/115101.257:ERROR:file_io_win.cc(179)] CreateFile C:\Users\bsati\AppData\Local\Temp\scoped_dir17020_5788\Crashpad\settings.dat: The process cannot access the file because it is being used by another process. (0x20)
+[0126/124641.009:ERROR:file_io_win.cc(179)] CreateFile C:\Users\bsati\AppData\Local\Temp\scoped_dir3376_10843\Crashpad\settings.dat: The process cannot access the file because it is being used by another process. (0x20)
+[0126/152437.421:ERROR:file_io_win.cc(179)] CreateFile C:\Users\bsati\AppData\Local\Temp\scoped_dir17660_40\Crashpad\settings.dat: The process cannot access the file because it is being used by another process. (0x20)
