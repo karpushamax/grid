@@ -53,7 +53,7 @@
 		        <version>2.20.1</version>
 		        <configuration>
 		          <includes>
-		            <include>/src/test/java/Runner.java</include>
+		            <include>/src/test/resources</include>
 		          </includes>
 		        </configuration>
             </plugin>
