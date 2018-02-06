@@ -48,7 +48,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Feb 6, 2018 05:30:02 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Feb 6, 2018 05:39:47 PM</span>
 				</a>
 			</li>
 			<li>
@@ -185,7 +185,7 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Grid test</span>
-						<span class='test-time'>Feb 6, 2018 05:30:02 PM</span>
+						<span class='test-time'>Feb 6, 2018 05:39:47 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -193,7 +193,7 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@mytest</span>
 	</div>
-	<span class='duration right label'>0h 0m 15s+723ms</span>
+	<span class='duration right label'>0h 0m 30s+884ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">gridtest</span>
@@ -204,26 +204,37 @@
 			<b>Given</b>
 			
 			<span class="bdd-step-name">Given I navigate to page</span>
-				<div class='pre'><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+				<div class='pre'><textarea>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=63.0.3239.132)
   (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.12 seconds
+Command duration or timeout: 16 milliseconds
 Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
 System info: host: 'LAPTOP-KLK9BRDQ', ip: '192.168.0.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\bsati\AppData\Local\Temp\scoped_dir29636_8686}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.132, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 7cd7a8c6320468bb446bb468b90a28c3
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\bsati\AppData\Local\Temp\scoped_dir32152_28352}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.132, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: d9fcbc285504f691f2cd1547cc0296be
+*** Element info: {Using=css selector, value=body > div.container > header > menu > a > button}
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:311)
-	at GridTest.grid.StepDef.i_navigate_to_webpage(StepDef.java:56)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:482)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.toString(Unknown Source)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at GridTest.grid.StepDef.i_navigate_to_webpage(StepDef.java:58)
 	at ✽.Given I navigate to page(src/test/test.feature:6)
-</pre></div>
+</textarea></div>
 			
 		</li>
 		<li test-id='4' class='node then skip' status='skip'>
@@ -329,7 +340,7 @@ Session ID: 7cd7a8c6320468bb446bb468b90a28c3
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 6, 2018 05:30:02 PM</td>
+										<td>Feb 6, 2018 05:39:47 PM</td>
 										<td class='linked' test-id='2'>Grid test.gridtest</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -377,7 +388,7 @@ Session ID: 7cd7a8c6320468bb446bb468b90a28c3
 
                         <li class='exception displayed active'>
                             <div class='exception-heading'>
-                                <span class='exception-name'>org.openqa.selenium.WebDriverException</span>
+                                <span class='exception-name'>org.openqa.selenium.NoSuchWindowException</span>
                                 <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
                             </div>
                             <div class='exception-content hide'>
@@ -392,28 +403,39 @@ Session ID: 7cd7a8c6320468bb446bb468b90a28c3
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Feb 6, 2018 05:30:03 PM</td>
+                                                        <td>Feb 6, 2018 05:39:47 PM</td>
                                                         <td class='linked' test-id='3'>Grid test.gridtest.Given I navigate to page</td>
-                                                        <td><pre><pre>org.openqa.selenium.WebDriverException: chrome not reachable
+                                                        <td><pre><textarea>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=63.0.3239.132)
   (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 4.12 seconds
+Command duration or timeout: 16 milliseconds
 Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
 System info: host: 'LAPTOP-KLK9BRDQ', ip: '192.168.0.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\bsati\AppData\Local\Temp\scoped_dir29636_8686}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.132, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 7cd7a8c6320468bb446bb468b90a28c3
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\bsati\AppData\Local\Temp\scoped_dir32152_28352}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.132, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: d9fcbc285504f691f2cd1547cc0296be
+*** Element info: {Using=css selector, value=body > div.container > header > menu > a > button}
+	at sun.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
 	at java.lang.reflect.Constructor.newInstance(Unknown Source)
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:311)
-	at GridTest.grid.StepDef.i_navigate_to_webpage(StepDef.java:56)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:482)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.toString(Unknown Source)
+	at java.lang.String.valueOf(Unknown Source)
+	at java.lang.StringBuilder.append(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:293)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at GridTest.grid.StepDef.i_navigate_to_webpage(StepDef.java:58)
 	at ✽.Given I navigate to page(src/test/test.feature:6)
-</pre></pre></td>
+</textarea></pre></td>
                                                     </tr>
                                         </tbody>
                                     </table>
@@ -457,19 +479,19 @@ Session ID: 7cd7a8c6320468bb446bb468b90a28c3
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 6, 2018 05:30:02 PM</div>
+					<div class='panel-lead'>Feb 6, 2018 05:39:47 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 6, 2018 05:30:18 PM</div>
+			 		<div class='panel-lead'>Feb 6, 2018 05:40:18 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>15,809ms</div>
+					<div class='panel-lead'>30,970ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
