@@ -48,7 +48,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Feb 7, 2018 10:36:39 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Feb 7, 2018 02:31:12 PM</span>
 				</a>
 			</li>
 			<li>
@@ -185,7 +185,7 @@
 				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Grid test</span>
-						<span class='test-time'>Feb 7, 2018 10:36:39 AM</span>
+						<span class='test-time'>Feb 7, 2018 02:31:13 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
@@ -193,7 +193,7 @@
 	<div class='category-list'>
 		<span class='category label white-text'>@mytest</span>
 	</div>
-	<span class='duration right label'>0h 26m 44s+49ms</span>
+	<span class='duration right label'>0h 0m 26s+986ms</span>
 	<div class='desc'>
 		<b>Scenario</b>
 		<span class="desc-text">gridtest</span>
@@ -228,25 +228,15 @@
 			<b>Then</b>
 			
 			<span class="bdd-step-name">Then I apply for jobs</span>
-				<div class='pre'><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=63.0.3239.132)
-  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20 milliseconds
-Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
-System info: host: 'LAPTOP-KLK9BRDQ', ip: '192.168.0.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\bsati\AppData\Local\Temp\scoped_dir20236_26259}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.132, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: e5294133ca70dd67a4459793cd220966
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at GridTest.grid.StepDef.i_apply_for_jobs(StepDef.java:144)
+				<div class='pre'><pre>java.lang.NullPointerException
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:653)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:646)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	at GridTest.grid.StepDef.i_apply_for_jobs(StepDef.java:188)
 	at ✽.Then I apply for jobs(src/test/test.feature:9)
 </pre></div>
 			
@@ -330,7 +320,7 @@ Session ID: e5294133ca70dd67a4459793cd220966
 								</thead>
 								<tbody>
 									<tr>
-										<td>Feb 7, 2018 10:36:39 AM</td>
+										<td>Feb 7, 2018 02:31:13 PM</td>
 										<td class='linked' test-id='2'>Grid test.gridtest</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
@@ -378,7 +368,7 @@ Session ID: e5294133ca70dd67a4459793cd220966
 
                         <li class='exception displayed active'>
                             <div class='exception-heading'>
-                                <span class='exception-name'>org.openqa.selenium.ElementNotVisibleException</span>
+                                <span class='exception-name'>java.lang.NullPointerException</span>
                                 <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
                             </div>
                             <div class='exception-content hide'>
@@ -393,27 +383,17 @@ Session ID: e5294133ca70dd67a4459793cd220966
                                         </thead>
                                         <tbody>
                                                     <tr>
-                                                        <td>Feb 7, 2018 10:36:55 AM</td>
+                                                        <td>Feb 7, 2018 02:31:33 PM</td>
                                                         <td class='linked' test-id='6'>Grid test.gridtest.Then I apply for jobs</td>
-                                                        <td><pre><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
-  (Session info: chrome=63.0.3239.132)
-  (Driver info: chromedriver=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73),platform=Windows NT 10.0.16299 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 20 milliseconds
-Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
-System info: host: 'LAPTOP-KLK9BRDQ', ip: '192.168.0.11', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.35.528161 (5b82f2d2aae0ca24b877009200ced9065a772e73), userDataDir=C:\Users\bsati\AppData\Local\Temp\scoped_dir20236_26259}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=63.0.3239.132, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: e5294133ca70dd67a4459793cd220966
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at GridTest.grid.StepDef.i_apply_for_jobs(StepDef.java:144)
+                                                        <td><pre><pre>java.lang.NullPointerException
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:302)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:653)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:646)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	at GridTest.grid.StepDef.i_apply_for_jobs(StepDef.java:188)
 	at ✽.Then I apply for jobs(src/test/test.feature:9)
 </pre></pre></td>
                                                     </tr>
@@ -459,19 +439,19 @@ Session ID: e5294133ca70dd67a4459793cd220966
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 7, 2018 10:36:39 AM</div>
+					<div class='panel-lead'>Feb 7, 2018 02:31:12 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 7, 2018 11:03:23 AM</div>
+			 		<div class='panel-lead'>Feb 7, 2018 02:31:40 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>1,604,118ms</div>
+					<div class='panel-lead'>27,164ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
