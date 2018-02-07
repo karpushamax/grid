@@ -53,7 +53,7 @@ public class StepDef {
 		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver,20);
 		
-		driver.manage().window().maximize();
+	//	driver.manage().window().maximize();
 		driver.get(url);
 		Page page = new Page(driver);
 		wait.until(ExpectedConditions.visibilityOf(page.login_button));
