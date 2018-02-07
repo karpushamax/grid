@@ -136,7 +136,7 @@ public class StepDef {
 			
 			if(iter!=0)
 			{
-				tree = new ArrayList<>();
+				tree = new ArrayList<WebElement>();
 				tree = driver.findElements(By.cssSelector("a[href^='/job/']"));
 			}
 			
