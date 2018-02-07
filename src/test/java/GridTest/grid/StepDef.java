@@ -17,7 +17,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Page.Page;
-
+import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import java.io.File;
 import java.nio.file.*;
@@ -48,7 +48,8 @@ public class StepDef {
 		System.out.println("MAX is STARTING TEST!");
 		String url = Helper.getPropValue("landing", "navigation");
 
-		WebDriverManager.chromedriver().setup();
+		//WebDriverManager.chromedriver().setup();
+		WebDriverManager.getInstance(CHROME).setup();
 		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver,20);
 		
@@ -144,7 +145,17 @@ public class StepDef {
 				 tree.get(i).click();
 				 
 				 driver.manage().timeouts().implicitlyWait(10, SECONDS);
-				 WebElement descr = driver.findElement(By.cssSelector("div[class='description left']"));
+				 WebElement descr = null;
+				 
+				 try {
+					descr = driver.findElement(By.cssSelector("div[class='description left']"));
+				} catch (org.openqa.selenium.NoSuchElementException e1) {
+					 
+					 tree.get(i).click();
+					 
+					 driver.manage().timeouts().implicitlyWait(10, SECONDS);
+					 descr = driver.findElement(By.cssSelector("div[class='description left']"));
+				}
  
 				 List<WebElement> ele = descr.findElements(By.tagName("p"));
 				 
