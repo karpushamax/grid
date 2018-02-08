@@ -216,6 +216,8 @@ public class StepDef {
 		
 	}
 
+ 
+	
 	@After
 	public void clean_up()
 	{
@@ -234,7 +236,7 @@ public class StepDef {
 	{
 		boolean result = false;
 		
-		String[] or = {"QA","qa","Test","test"};
+		String[] or = {"QA","qa","Test","test","Automation"};
 		String[] and = {"Java","Selenium"};
 		
 		 for(String r:or)
