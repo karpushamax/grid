@@ -40,7 +40,7 @@ public class TotalPage {
 	@FindBy(how = How.CSS, using = "#location")
 	public WebElement landing_where;	
 	
-	@FindBy (how = How.CSS, using = "body > div.container.results-container > div.row.job-results-row > div > div.col-sm-9.job-results.clearfix > div > div.col-xs-12.job-results.clearfix")
+	@FindBy (how = How.CSS, using = "div[class='col-xs-12 job-results clearfix']")
 	public WebElement search_results_container;
 	
 	@FindBy (how = How.CSS, using = "#JobToolsTop_AOLOptions_lnkApplyOnline")
