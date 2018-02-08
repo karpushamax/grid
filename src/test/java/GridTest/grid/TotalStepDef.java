@@ -41,7 +41,7 @@ public class TotalStepDef {
 		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver,45);
 		
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		
 		jex = (JavascriptExecutor)driver;
 		
