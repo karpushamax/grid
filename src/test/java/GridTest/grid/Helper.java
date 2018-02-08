@@ -25,5 +25,29 @@ public class Helper {
 		
 		return result;
 	}
+	
+	public static boolean valid(String s)
+	{
+		boolean result = false;
+		
+		if(s!=null)
+		{
+		String[] or = {"QA","qa","Test","test","Automation"};
+		String[] and = {"Java","Selenium"};
+		
+		 for(String r:or)
+		 {
+			 if(s.toLowerCase().contains(r.toLowerCase()))
+			 {
+				 if(s.toLowerCase().contains(and[0].toLowerCase())||s.toLowerCase().contains(and[1].toLowerCase()))
+				 {
+					 result = true;
+					 break;
+				 }
+			 }
+		 }
+		}
+		return result;
+	}
 
 }

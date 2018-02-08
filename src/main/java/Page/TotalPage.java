@@ -34,6 +34,27 @@ public class TotalPage {
 	@FindBy(how = How.CSS, using = "#btnLogin")
 	public WebElement login_submit;
 	
+	@FindBy(how = How.CSS, using = "#keywords")
+	public WebElement landing_what;
+	
+	@FindBy(how = How.CSS, using = "#location")
+	public WebElement landing_where;	
+	
+	@FindBy (how = How.CSS, using = "body > div.container.results-container > div.row.job-results-row > div > div.col-sm-9.job-results.clearfix > div > div.col-xs-12.job-results.clearfix")
+	public WebElement search_results_container;
+	
+	@FindBy (how = How.CSS, using = "#JobToolsTop_AOLOptions_lnkApplyOnline")
+	public WebElement job_apply;
+	
+	@FindBy (how = How.CSS, using = "#top-button-panel > section > div.buttons-panel-layer.main-layer > div.apply-job-col > div > div.col-xs-12.col-sm-6.oca-container > div:nth-child(1) > a")
+	public WebElement job_apply_once;
+	
+	@FindBy (how = How.CSS, using = "div[class='job-description']")
+	public WebElement job_container;
+	
+	@FindBy (how = How.CSS, using = "#search-submit-button-desktop")
+	public WebElement submitted_search;
+	
 	final void init(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
