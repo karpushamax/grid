@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import Page.Page;
+import Page.TotalPage;
 import cucumber.api.java.en.Given;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -37,13 +38,28 @@ public class TotalStepDef {
 		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver,20);
 		
-	//	driver.manage().window().maximize();
-		driver.get(url);
-		Page page = new Page(driver);
-	//	wait.until(ExpectedConditions.visibilityOf(page.login_button));
+		driver.manage().window().maximize();
+		
 		jex = (JavascriptExecutor)driver;
 		
+		driver.get(url);
+		TotalPage page = new TotalPage(driver);
+		wait.until(ExpectedConditions.visibilityOf(page.landing_search));
+		page.landing_signin.click();
+		page.landing_signin_seeker.click();
 		
+		String email = Helper.getPropValue("email", "total_cred");
+		String password = Helper.getPropValue("password", "total_cred");
+		
+		page.login_email.clear();
+		page.login_email.sendKeys(email);
+		
+		page.login_password.clear();
+		page.login_password.sendKeys(password);
+		
+		page.login_submit.click();
+		
+		wait.until(ExpectedConditions.visibilityOf(page.landing_search));
 	}
 
 

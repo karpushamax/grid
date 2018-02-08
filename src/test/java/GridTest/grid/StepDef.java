@@ -51,7 +51,7 @@ public class StepDef {
 		//WebDriverManager.chromedriver().setup();
 		WebDriverManager.getInstance(CHROME).setup();
 		driver = new ChromeDriver();
-		wait = new WebDriverWait(driver,20);
+		wait = new WebDriverWait(driver,65);
 		
 	//	driver.manage().window().maximize();
 		driver.get(url);
