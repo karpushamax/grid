@@ -96,9 +96,17 @@ public class TotalStepDef {
 			if(iter!= 0)
 			{
 				 
-				container = wait.until(ExpectedConditions.visibilityOf(page.search_results_container));
-				ele.clear();
-				ele = container.findElements(By.tagName("h2"));
+				try {
+					container = wait.until(ExpectedConditions.visibilityOf(page.search_results_container));
+					ele.clear();
+					ele = container.findElements(By.tagName("h2"));
+				} catch (org.openqa.selenium.TimeoutException e) {
+					
+					page.submitted_search.click();
+					container = wait.until(ExpectedConditions.visibilityOf(page.search_results_container));
+					ele.clear();
+					ele = container.findElements(By.tagName("h2"));
+				}
 			}
 			if(i == iter)
 			{
@@ -115,8 +123,16 @@ public class TotalStepDef {
 					text = text + par.getText();
 				}
 			} catch (org.openqa.selenium.TimeoutException e3) {
-				// TODO Auto-generated catch block
-				e3.printStackTrace();
+				ele.get(i).click();
+				WebElement cont = wait.until(ExpectedConditions.visibilityOf(page.job_container));
+				List<WebElement> paragraph = cont.findElements(By.tagName("p"));
+				
+				text = "";
+				for(WebElement par:paragraph)
+				{
+					text = text + par.getText();
+				}
+				
 			}
 			
 			
@@ -146,6 +162,7 @@ public class TotalStepDef {
 			} catch (org.openqa.selenium.TimeoutException e) {
  
 				driver.switchTo().window(window);
+				page.submitted_search.click();
 			}
 			}
 			iter ++;
