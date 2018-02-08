@@ -175,7 +175,7 @@ public class StepDef {
 				 
 				 if(valid(str))
 				 {
-					 System.out.println(iter);
+					 System.out.println("WILL CLICK NOW FOR CANDIDACY: " + iter);
 					 try
 					 {
 					 jex.executeScript("document.getElementsByClassName('one-click-apply-btn applynowButton')[0].click()");
