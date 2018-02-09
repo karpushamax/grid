@@ -138,6 +138,7 @@ public class StepDef {
 			if(iter!=0)
 			{
 				tree = new ArrayList<WebElement>();
+				tree.clear();
 				tree = driver.findElements(By.cssSelector("a[href^='/job/']"));
 			}
 			
@@ -158,15 +159,23 @@ public class StepDef {
 					descr = driver.findElement(By.cssSelector("div[class='description left']"));
 				} catch (org.openqa.selenium.NoSuchElementException e1) {
 					 if(!clicked.contains(name))
+					 {
 					 tree.get(i).click();
 					 
 					 driver.manage().timeouts().implicitlyWait(10, SECONDS);
 					 descr = driver.findElement(By.cssSelector("div[class='description left']"));
 					 clicked.add(name);
 					 System.out.println(name);
+					 }
 				}
  
-				 List<WebElement> ele = descr.findElements(By.tagName("p"));
+				 List<WebElement> ele;
+				try {
+					ele = descr.findElements(By.tagName("p"));
+				} catch (java.lang.NullPointerException e1) {
+			 
+					ele = new ArrayList<WebElement>();
+				}
 				 
 				 String str = "";
 				 
@@ -209,12 +218,12 @@ public class StepDef {
 				 }
 				 
 				 try {
-//					JavascriptExecutor js = (JavascriptExecutor)driver;
-//					 WebElement searchbutton = (WebElement)js.executeScript("return document.getElementById('searchBtn')");
-//					 searchbutton.click();
+					JavascriptExecutor js = (JavascriptExecutor)driver;
+					 WebElement searchbutton = (WebElement)js.executeScript("return document.getElementById('searchBtn')");
+					 searchbutton.click();
 					 
-						driver.get(list);
-						driver.manage().timeouts().implicitlyWait(10, SECONDS);			 
+//						driver.get(list);
+//						driver.manage().timeouts().implicitlyWait(10, SECONDS);			 
 				} catch (org.openqa.selenium.ElementNotVisibleException e) {
 				 
 					driver.get(list);

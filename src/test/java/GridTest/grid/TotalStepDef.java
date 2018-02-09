@@ -85,6 +85,8 @@ public class TotalStepDef {
 	public void i_apply_for_applicable_jobs() throws Throwable {
 	//	driver.manage().timeouts().implicitlyWait(10, SECONDS);
 		WebElement container = wait.until(ExpectedConditions.visibilityOf(page.search_results_container));
+		
+		
 		ele = container.findElements(By.tagName("h2"));
 
 		int count = ele.size();
