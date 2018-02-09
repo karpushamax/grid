@@ -157,7 +157,7 @@ public class StepDef {
 				 try {
 					descr = driver.findElement(By.cssSelector("div[class='description left']"));
 				} catch (org.openqa.selenium.NoSuchElementException e1) {
-					 
+					 if(!clicked.contains(name))
 					 tree.get(i).click();
 					 
 					 driver.manage().timeouts().implicitlyWait(10, SECONDS);
@@ -233,7 +233,7 @@ public class StepDef {
 	@After
 	public void clean_up()
 	{
-//		driver.close();
+		driver.close();
 	}
 	
 	
