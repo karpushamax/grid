@@ -41,6 +41,7 @@ public class StepDef {
 	int iter;
 	String list;
 	JavascriptExecutor jex;
+	List<String> clicked;
 	
 	@Given("^I navigate to page$")
 	public void i_navigate_to_webpage() throws Throwable {
@@ -59,7 +60,7 @@ public class StepDef {
 		wait.until(ExpectedConditions.visibilityOf(page.login_button));
 		jex = (JavascriptExecutor)driver;
 		
-		
+		clicked = new ArrayList<String>();
 		
 	}
 	
@@ -142,11 +143,17 @@ public class StepDef {
 			
 			 if(iter == i)
 			 {
+				 String name = tree.get(i).getText();
+				 
+				 if(!clicked.contains(name))
+				 {
 				 tree.get(i).click();
+				 
 				 
 				 driver.manage().timeouts().implicitlyWait(10, SECONDS);
 				 WebElement descr = null;
-				 
+				 clicked.add(name);
+				 System.out.println(name);
 				 try {
 					descr = driver.findElement(By.cssSelector("div[class='description left']"));
 				} catch (org.openqa.selenium.NoSuchElementException e1) {
@@ -155,6 +162,8 @@ public class StepDef {
 					 
 					 driver.manage().timeouts().implicitlyWait(10, SECONDS);
 					 descr = driver.findElement(By.cssSelector("div[class='description left']"));
+					 clicked.add(name);
+					 System.out.println(name);
 				}
  
 				 List<WebElement> ele = descr.findElements(By.tagName("p"));
@@ -200,18 +209,21 @@ public class StepDef {
 				 }
 				 
 				 try {
-					JavascriptExecutor js = (JavascriptExecutor)driver;
-					 WebElement searchbutton = (WebElement)js.executeScript("return document.getElementById('searchBtn')");
-					 searchbutton.click();
+//					JavascriptExecutor js = (JavascriptExecutor)driver;
+//					 WebElement searchbutton = (WebElement)js.executeScript("return document.getElementById('searchBtn')");
+//					 searchbutton.click();
+					 
+						driver.get(list);
+						driver.manage().timeouts().implicitlyWait(10, SECONDS);			 
 				} catch (org.openqa.selenium.ElementNotVisibleException e) {
 				 
 					driver.get(list);
 					driver.manage().timeouts().implicitlyWait(10, SECONDS);
 				}
-				 
-				 iter ++;
 			 }
-			
+				 
+			 }
+			iter ++;
 		}
 		
 	}

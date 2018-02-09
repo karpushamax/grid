@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import Page.Page;
 import Page.TotalPage;
+import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -168,5 +169,13 @@ public class TotalStepDef {
 			iter ++;
 			
 		}
+		
+		
+	}
+	
+	@After
+	public void total_clean_up()
+	{
+		driver.close();
 	}
 }
