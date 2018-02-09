@@ -230,11 +230,11 @@ public class StepDef {
 
  
 	
-	@After
-	public void clean_up()
-	{
-		driver.close();
-	}
+//	@After
+//	public void clean_up()
+//	{
+//		driver.close();
+//	}
 	
 	
 	public void populate()

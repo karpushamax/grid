@@ -173,9 +173,9 @@ public class TotalStepDef {
 		
 	}
 	
-	@After
-	public void total_clean_up()
-	{
-		driver.close();
-	}
+//	@After
+//	public void total_clean_up()
+//	{
+//		driver.close();
+//	}
 }
