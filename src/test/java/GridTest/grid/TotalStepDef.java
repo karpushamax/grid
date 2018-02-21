@@ -149,7 +149,7 @@ public class TotalStepDef {
 				} catch (org.openqa.selenium.NoSuchElementException e) {
 				 
 					try {
-						jex.executeScript("document.getElementById('JobToolsTop_AOLOptions_lnkApplyOnline').disabled = 'disabled'");
+						jex.executeScript("document.getElementById('JobToolsTop_AOLOptions_lnkApplyOnline').disabled = ''");
 						page.job_apply.click();
 					} catch (org.openqa.selenium.NoSuchElementException e1) {
  						e1.printStackTrace();
