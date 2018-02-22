@@ -5,6 +5,7 @@ import static io.github.bonigarcia.wdm.DriverManagerType.CHROME;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -42,7 +43,7 @@ public class TotalStepDef {
 		driver = new ChromeDriver();
 		wait = new WebDriverWait(driver,45);
 		
-		//driver.manage().window().maximize();
+		driver.manage().window().setSize(new Dimension(1400, 900));
 		
 		jex = (JavascriptExecutor)driver;
 		
@@ -164,8 +165,10 @@ public class TotalStepDef {
 				WebElement subsearch = wait.until(ExpectedConditions.elementToBeClickable(page.submitted_search));
 				subsearch.click();
 			} catch (org.openqa.selenium.TimeoutException e) {
- 
+				//String curwindow = driver.getWindowHandle();
+				driver.close();
 				driver.switchTo().window(window);
+				
 				page.submitted_search.click();
 			}
 			}
